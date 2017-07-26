@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>weex-vue-bundle-util-demo</title>
+  <meta name="weex-viewport" content="750" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+
+  <!-- About style below: html's height should set to 100%, and this style should be added
+    before the weex-vue-render script loaded. OTHERWISE the
+    weex.config.env.deviceHeight' will not work. -->
+  <style>
+    html, body {
+      -ms-overflow-style: scrollbar;
+      -webkit-tap-highlight-color: transparent;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./node_modules/vue/dist/vue.runtime.min.js"></script>
+  <script src="./dist/index.min.js"></script>
+  <!--<script src="./node_modules/weex-vue-render/dist/index.min.js"></script>-->
+  <script src="./dist/bundle.js"></script>
+</body>
+</html>
