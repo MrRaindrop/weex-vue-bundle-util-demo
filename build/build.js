@@ -65,7 +65,11 @@ minifyConfig.dest = minifyConfig.dest.replace(/.js$/, '.min.js')
 minifyConfig.plugins = minifyConfig.plugins.slice()
 minifyConfig.plugins.push(uglify())
 
-scan(webpack, webpackConfig, { output: absolute('../src/weex-vue-plugins.js') })
+var options = {
+  output: absolute('../src/weex-vue-plugins.js'),
+  allowInstallPlugins: true
+}
+scan(webpack, webpackConfig, options)
   .then(function (res) {
     console.log('=> weex-vue-bundle-util analyze res:')
     console.log(res)
